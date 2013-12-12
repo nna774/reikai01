@@ -1,0 +1,307 @@
+(html (@lang "ja") (* This document is translated from S-exp by HtSExp( https://github.com/nna774/htsexp ). See original file *.htsexp. *)
+    (head
+        (title "例会講座スライド")
+        
+        (meta (@charset "utf-8"))
+        (meta (@name "apple-mobile-web-app-capable") (@content "yes"))
+        (meta (@name "apple-mobile-web-app-status-bar-style") (@content "black-translucent"))
+        (meta (@name "viewport") (@content "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"))
+        
+        (link (@rel "stylesheet") (@href "css/reveal.css"))
+        (link (@rel "stylesheet") (@href "css/theme/default.css") (@id "theme"))
+
+        (script
+            "document.write( '<link rel=\"stylesheet\" href=\"css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css\" type=\"text/css\" media=\"print\">' );"
+        )
+        
+        (style (@type "text/css") 
+            (* 
+                .red{ color: red; };
+            *)
+        )
+    )
+
+    (body
+        (div (@class "reveal")
+        (div (@class "slides")
+            (section
+                (small (del "めっちゃすごいスライド"))
+                (h1 "博士の異常な愛情")
+                (h2 "または私は如何にして心配するのを止めて" (strong (spam (@class "red") "参照透明")) "を愛するようになったか")
+                (h6 "KMC 1回 nona7")
+            )
+            (section
+                (h3 "自己紹介")
+                (ul
+                    (li "ID: nona7")
+                    (li "おなまえ: [れべるぜろ] 名無しの人 A")
+                    (li "\"のな\" と呼ばれることが多い？")
+                    (li "理学部1回生")
+                    (li 
+                        (div
+                            (div "Twitter: " (a (@href "https://twitter.com/nonamea774") "@nonamea774"))
+                            (div
+                                (a (@href "https://www.dropbox.com/s/7nfhpr5k1x5f3fr/824346029.png") (img (@src "https://dl-web.dropbox.com/s/7nfhpr5k1x5f3fr/824346029.png") (@width "64")))
+                                (a (@href "https://www.dropbox.com/s/af9axc60vdgzmgk/44-kazoo_.png") (img (@src "https://dl-web.dropbox.com/s/af9axc60vdgzmgk/44-kazoo_.png") (@width "64")))
+                                (a (@href "https://www.dropbox.com/s/u2ad6n615ot9ma6/IMG_0095.png") (img (@src "https://dl-web.dropbox.com/s/u2ad6n615ot9ma6/IMG_0095.png") (@width "64")))
+                                (a (@href "https://www.dropbox.com/s/1x1y93zx6swsqqr/IMG_8834.PNG") (img (@src "https://dl-web.dropbox.com/s/1x1y93zx6swsqqr/IMG_8834.PNG") (@width "64")))
+                                (a (@href "https://www.dropbox.com/s/s0mv0hr8l933ydv/IMG_5360.JPG") (img (@src "https://dl-web.dropbox.com/s/s0mv0hr8l933ydv/IMG_5360.JPG") (@width "64")))
+                            )
+                            (* div "アイコンかわいい" *)
+                        )
+                    )
+                    (li "最近改二が実装された")
+                )
+            )
+            (section
+                (h2 "KMC での活動")
+                (ul
+                    (li "プライベートクラウド計画 - 提督")
+                    (li (a (@href "http://d.hatena.ne.jp/kmc-log/20131126/1385474872") "KMCアドベントカレンダー2013"))
+                    (li "Coq勉強会")
+                    (li "RICOH and Java Developer Challenge Plus 2013")
+                    (li "Nchippaku")
+                    (li "Twitter")
+                    (li "Tumblr")
+                    (li "KanColle")
+                )
+                "etc..."
+            )
+            (section
+                (section (h2 "このスライド"))
+                (section "reveal.js とかいうすごいやつ")
+                (section "html で適当に書いてひな形に放り込めばかっこいいスライドになる")
+                (section (strong "でも"))
+                (section (strong "生のHTML"))
+                (section 
+                    (p (strong "書きたくない！！！1111"))
+                    (br)
+                    (p "閉じタグの対応とか考えるのヤダー")
+                )
+                (section 
+                    (p
+                        "？？？「大丈夫よ, 司令官！ S式があるじゃない！」"
+                    )
+                    (p
+                        (small
+                            (blockquote 
+                                (p (a (@href "http://jibun.atmarkit.co.jp/ljibun01/rensai/genius/01/01.html") "いまRubyがブームだが、Rubyは要するにカッコのないLisp。<br>XMLもぶ厚いカッコのあるLisp。"))
+                                (p "竹内郁雄")
+                            )
+                        )
+                    )
+                )
+                (section 
+                    (p "というわけでS式からHTML に変換するの最近作りました.")
+                    (p (a (@href "https://github.com/nna774/htsexp") "htsexp(仮)"))
+                    (p "まだ未発覚のバグ潜んでそう" (br) "とりあえずこのスライドはコンパイルできた")
+                    (small "既存のものもあったけど不満点あったので作ってみた")
+                )
+            )
+            (section "かんわきゅうだい")
+            (section (h1 "楽しいLazyK 入門"))
+            (section
+                (h2 "はじめに")
+                (img (@src "img/hajimeni3.png") (@alt "はじめに"))
+            )
+            (section
+                (p
+                    (ul
+                        (li "このスライドは難解プログラミング言語勉強会の宣伝です.")
+                        (li "あんまり詳しい話は今回はパス")
+                        (li "言語の紹介ぐらいだけ")
+                    )
+                )
+                (br)
+                (p 
+                    (small 
+                        (*"変な話してたからでは？？"*)
+                        (br)
+                        "詳しくは難解〜に参加しましょう！"
+                    )
+                )
+            )
+            (section
+                (h2 "What is LazyK?")
+            )
+            (section
+                (h3 "組み込み関数は3つだけ")
+                (ul
+                    (li "I = λx. x")
+                    (li "K = λxy. x")
+                    (li "S = λxyz. x z (y z)")
+                )
+                (* コンビネータ記法が好きなのでiota 記法とかはとりあえずおいておく *)
+            )
+            (section
+                (h3 "I コンビネータ")
+                (p
+                    (ul
+                        (li "I x = x")
+                        (li "λx. x")
+                    )
+                )
+                (p
+                    (ul
+                        (li "引数を一つ取ってその引数を返す関数")
+                        (li "とったものをそのまま返すだけ")
+                        (li (span (@class "red") "I") "dentity Combinator")
+                    )
+                )
+                (p (small "実は SKK == I が成り立つのでなくてもいい"))
+            )
+            (section
+                (h3 "K コンビネータ")
+                (p
+                    (ul
+                        (li "K x y = x")
+                        (li "λxy. x")
+                    )
+                )
+                (p
+                    (ul
+                        (li "2引数をとって1つ目の引数を返す関数")
+                        (li "「引数を一つ取って(xとする)," 
+                            (br)
+                            "  「引数を一つ取ってx を返す関数」"
+                            (br) 
+                            "を返す関数」と言ってもいい" 
+                            (br)
+                            (small " -- ややこしいなら一旦置いといていいかも"))
+                        (li "Constant Combinator")
+                        (li (span (@class "red") "K") "onstant(独)" (small " -- 今回調べてて知った"))
+                        (li "定数関数")
+                    )
+                )
+            )
+            (section
+                (h3 "S コンビネータ")
+                (p
+                    (ul
+                        (li "S x y z  = x z (y z)")
+                        (li "λxyz. x z (y z)")
+                    )
+                )
+                (p
+                    (ul
+                        (li "3つ引数を取って, 1つ目と2つ目に3つ目を適用する関数")
+                        (li (span (@class "red") "S") "haring Combinator")
+                        (li "第三引数をシェアしてる感じ")
+                    )
+                )
+            )
+            (section
+                "この3つと括弧だけで書く"
+                (br)
+                (small "(コンビネータスタイルの場合は)")
+                (br)
+                (small "めっちゃ簡単！！")
+                (br)
+                (small "Brainfu*k とか命令数多すぎ！！")
+            )
+            (section
+                "「これらの組み合わせだけでどうやってプログラム書くの."
+                (br)
+                " 組み合わせても謎の関数しかできないですよね 」"
+            )
+            (section
+                (p
+                    "入力として受け取ったものを,"
+                    (br)
+                    "あなたが書いたプログラム- \"謎の関数\" - に引数として渡して"
+                    (br)
+                    "出てきたものが出力です."
+                )
+                (p 
+                    (small 
+                        "正確には入力として渡された文字列がチャーチ数のリストとしてエンコードされてそれが渡されて……"
+                        (br)
+                        "-- 詳しくは難解〜で！！")
+                )
+            )
+            (*section
+                "わずかこれだけの仕様でチューリング完全"
+            *)
+            (section
+                (h2 "サンプルコード")
+                (p
+                    (h3 "echo")
+                    (br)
+                    (pre (code "I"))
+                )
+            )
+            (section
+                (h2 "サンプルコード")
+                (p
+                    (h3 "エラトステネスのふるい")
+                    (br)
+                    (pre (code "K
+(SII(S(K(S(S(K(SII(S(S(KS)(S(K(S(KS)))(S(K(S(S(KS)(SS(S(S(KS)K))(KK)))))
+(S(S(KS)(S(KK)(S(KS)(S(S(KS)(S(KK)(S(KS)(S(S(KS)(S(KK)(SII)))
+(K(SI(KK)))))))(K(S(K(S(S(KS)(S(K(SI))(S(KK)(S(K(S(S(KS)K)(S(S(KS)K)I)
+(S(SII)I(S(S(KS)K)I)(S(S(KS)K)))))(SI(K(KI)))))))))(S(KK)K)))))))(K(S(KK)
+(S(SI(K(S(S(S(S(SSK(SI(K(KI))))(K(S(S(KS)K)I(S(S(KS)K)(S(S(KS)K)I))
+(S(K(S(SI(K(KI)))))K)(KK))))(KK))(S(S(KS)(S(K(SI))(S(KK)(S(K(S(S(KS)K)))
+(SI(KK))))))(K(K(KI)))))(S(S(KS)(S(K(SI))(SS(SI)(KK))))(S(KK)
+(S(K(S(S(KS)K)))(SI(K(KI)))))))))(K(K(KI))))))))))(K(KI)))))(SI(KK)))))
+(S(K(S(K(S(K(S(SI(K(S(K(S(S(KS)K)I))(S(SII)I(S(S(KS)K)I)))))))K))))
+(S(S(KS)(S(KK)(SII)))(K(SI(K(KI)))))))(SII(S(K(S(S(KS)(S(K(S(S(SI(KK))
+(KI))))(SS(S(S(KS)(S(KK)(S(KS)(S(K(SI))K)))))(KK))))))(S(S(KS)
+(S(K(S(KS)))(S(K(S(KK)))(S(S(KS)(S(KK)(SII)))(K(S(S(KS)K)))))))(K(S(S(KS)
+(S(K(S(S(SI(KK))(KI))))(S(KK)(S(K(SII(S(K(S(S(KS)(S(K(S(K(S(S(KS)(S(KK)
+(S(KS)(S(K(SI))K))))(KK)))))(S(S(KS)(S(KK)(S(K(SI(KK)))(SI(KK)))))
+(K(SI(KK))))))))(S(S(KS)(S(K(S(KS)))(S(K(S(KK)))(S(S(KS)(S(KK)(SII)))
+(K(SI(K(KI))))))))(K(K(SI(K(KI)))))))))(S(K(SII))(S(K(S(K(SI(K(KI))))))
+(S(S(KS)(S(KK)(SI(K(S(K(S(SI(K(KI)))))K)))))(K(S(K(S(SI(KK))))
+(S(KK)(SII)))))))))))(K(SI(K(KI))))))))(S(S(KS)K)I)
+(SII(S(K(S(K(S(SI(K(KI)))))K))(SII)))))"))
+                )
+            )
+            (section
+                (h2 "まとめ")
+                (ul
+                    (li
+                        "難解プログラミング勉強会に参加しよう！"
+                        (ul
+                            (li "ゆるふわです")
+                            (li "くわしくやります")
+                            (li "いろいろ今回は説明すっ飛ばした")
+                        )
+                    )
+                    (li "参照透明な海に潜りましょう.")
+                    (li "ものまね鳥をまねましょう")
+                )
+            )
+            (section
+                (h2 "ありがとうございました")
+                (h2 "なにか質問など")
+            )
+            (section
+                (h2 "参考文献")
+                (ul
+                    (li (a (@href "http://homepages.cwi.nl/~tromp/cl/lazy-k.html") "Lazy K 公式サイト"))
+                    (li "関数型λカ娘一巻")
+                    (li (a (@href "http://www.slideshare.net/_yingtai/lambda-guide") "ラムダ計算入門"))
+                    (li (a (@href "https://ja.wikipedia.org/w/index.php?title=Lazy_K&oldid=47450958") "Lazy K 2013年4月15日 (月) 08:39; Fumiexcel による版"))
+                    (li (a (@href "http://d.hatena.ne.jp/rst76/20090427/1240845612") "Lazy K 入門"))
+                )
+            )
+        )
+        )
+
+        (script (@src "lib/js/head.min.js"))
+        (script (@src "js/reveal.min.js"))
+
+        (script
+            "Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                width : '90%',
+                height : '90%'
+             });"
+        )
+    )
+)
